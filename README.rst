@@ -50,7 +50,7 @@ A minimal example of parallel remote execution.::
 	                zmq.cluster.lapply(cluster=cluster,
 	                                   as.list(1:1e3),
 	                                   estimatePi))
-	                                   ##echoBack))
+
 	print(mean(unlist(ans)))
 	print(run.time)
 	print(attr(ans,"execution.report"))
