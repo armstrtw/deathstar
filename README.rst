@@ -31,8 +31,7 @@ Usage
 
 A minimal example of parallel remote execution.
 
-execute this R script on the remote server::
-	
+
 	require(deathstar)
 	
 	estimatePi <- function(seed) {
