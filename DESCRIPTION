@@ -1,0 +1,10 @@
+Package: deathstar
+Title: distributed lappy and other tools
+Version: 0.0.1
+Maintainer: Whit Armstrong <armstrong.whit@gmail.com>
+Author: Whit Armstrong <armstrong.whit@gmail.com>
+Description: distributed lapply across EC2 and local nodes
+License: GPL-3
+Depends: methods, rzmq
+URL: http://github.com/armstrtw/deathstar
+BugReports: http://github.com/armstrtw/deathstar/issues
