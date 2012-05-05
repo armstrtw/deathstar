@@ -29,7 +29,7 @@ deathstar allows distributed lapply into Amazon's EC2 cloud or across local comp
 Usage
 =====
 
-A minimal example of parallel remote execution.
+A minimal example of parallel remote execution.::
 
 
 	require(deathstar)
