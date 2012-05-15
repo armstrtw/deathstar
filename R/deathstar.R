@@ -161,12 +161,15 @@ zmq.cluster.lapply <- function(cluster,X,FUN,...,exec.port=6000L,status.port=600
         if(node$number.pending()) {
             for(i in 1:node$number.pending()) {
                 this.ans <- node$get.result()
+                if(!is.null(class(this.ans$result)) && class(this.ans$result) == "try-error") { warning("remote node returned an error.") }
                 ans[[ this.ans$index ]] <- this.ans$result
                 execution.report[[ this.ans$index ]] <- this.ans$node
             }
         }
     }
 
-    attr(ans,"execution.report") <- as.matrix(table(do.call(rbind,execution.report)))
+    execution.report <- as.matrix(table(do.call(rbind,execution.report)))
+    colnames(execution.report) <- "jobs.completed"
+    attr(ans,"execution.report") <- execution.report
     ans
 }
