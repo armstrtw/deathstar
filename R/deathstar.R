@@ -55,7 +55,7 @@ deathStar <-
                     }
 
                     ## append job to pending list
-                    pending.jobs[length(pending.jobs) + 1] <<- index
+                    pending.jobs[length(pending.jobs) + 1] <<- as.integer(index)
 
                     ## expects socket to be ZMQ_DEALER
                     ## send as though this is a req message
